@@ -1,6 +1,6 @@
 dbConfig = {
-    'user': 'root',
-    'password': "mypassword",
+    'user': 'books',
+    'password': "test12345",
     'host': "localhost",
-    'database': "mybooks"
+    'database': "books",
 }

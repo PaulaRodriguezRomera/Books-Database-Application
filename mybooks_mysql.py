@@ -11,9 +11,9 @@ cursor = con.cursor()
 class Bookdb:
     def __init__(self):
         self.con = pyo.connect(**dbConfig)
-        self.cursor = con.cursor()
+        self.cursor = self.con.cursor()  # Corrected to use self.con
         print("You have connected to the database")
-        print(con)
+        print(self.con)  # Corrected to use self.con
 
     def __del__(self):
         self.con.close()

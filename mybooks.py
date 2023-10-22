@@ -23,10 +23,10 @@ class Bookdb:
         rows = self.cursor.fetchall()
         return rows
 
-    def insert(self,title,author,isbn):
+    def insert(self, title, author, isbn):
         sql=("INSERT INTO books(title,author,isbn)VALUES (%s,%s,%s)")
-        values =[title,author,isbn]
-        self.cursor.execute(sql,values)
+        values =[title, author, isbn]
+        self.cursor.execute(sql, values)
         self.con.commit()
         messagebox.showinfo(title="Book Database", message="New book added to database")
 
